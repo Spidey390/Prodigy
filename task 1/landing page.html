@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prodigy Task 01 – Responsive Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="logo">Techno<span>Work</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu"> 
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#contact" class="nav-link btn btn-sm">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home" class="section hero">
+    <div class="container grid-2">
+      <div class="hero__content">
+        <h1 class="title">Build a Clean, Responsive <span>Landing Page</span></h1>
+        <p class="subtitle">
+          Fixed navigation that changes style on scroll & hover using HTML, CSS, and a bit of JavaScript.
+        </p>
+        <a href="#features" class="btn">Explore Features</a>
+      </div>
+      <div class="hero__art">
+        <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/html5.svg" alt="HTML" />
+        <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/css3.svg" alt="CSS" />
+        <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/javascript.svg" alt="JS" />
+      </div>
+    </div>
+  </section>
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-desc">Everything you need for your internship task.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Fixed Nav</h3>
+          <p>The header stays visible on all pages.</p>
+        </article>
+
+        <article class="card">
+          <h3>Scroll Reactivity</h3>
+          <p>Background & link colors change after you scroll.</p>
+        </article>
+
+        <article class="card">
+          <h3>Hover States</h3>
+          <p>Clear feedback when hovering over menu items.</p>
+        </article>
+
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Adaptive layout with a mobile hamburger menu.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="section alt">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title">About This Task</h2>
+        <p>
+          This landing page is built with a light theme, semantic HTML5, modern CSS (custom properties, grid, flex), and minimal JS for interactivity.
+        </p>
+        <ul class="list">
+          <li>Clean, scalable structure</li>
+          <li>Accessible and keyboard-friendly</li>
+          <li>Smooth scroll & active link highlighting</li>
+        </ul>
+      </div>
+      <div class="about__art">
+        <img src="https://illustrations.popsy.co/white/freelancer.svg" alt="About illustration" />
+      </div>
+    </div>
+  </section>
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 class="section-title">Pricing</h2>
+      <p class="section-desc"></p>
+
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Starter</h3>
+          <p class="price">$0</p>
+          <ul>
+            <li>1 Page</li>
+            <li>Basic Styling</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Choose</a>
+        </div>
+
+        <div class="price-card popular">
+          <div class="badge">Popular</div>
+          <h3>Pro</h3>
+          <p class="price">$29</p>
+          <ul>
+            <li>Up to 5 Pages</li>
+            <li>Advanced Styling</li>
+            <li>Priority Support</li>
+          </ul>
+          <a href="#" class="btn">Choose</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Enterprise</h3>
+          <p class="price">$99</p>
+          <ul>
+            <li>Unlimited Pages</li>
+            <li>Custom Components</li>
+            <li>24/7 Support</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Choose</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Submitted!')">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span></p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
